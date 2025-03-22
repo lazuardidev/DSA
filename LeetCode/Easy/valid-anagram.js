@@ -22,12 +22,8 @@ var isAnagram = function (s, t) {
 
   for(let i = 0; i < s.length; i++){
     charMap[s.charCodeAt(i) - 'a'.charCodeAt(0)]++;
-    charMap[t.charCodeAt(i) - 'a'.charCodeAt(0)]--;
-    // console.log(charMap[i]);
-    
+    charMap[t.charCodeAt(i) - 'a'.charCodeAt(0)]--; 
   }
-
-  console.log(charMap);
 
   return charMap.every(char => char === 0);
 };
